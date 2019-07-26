@@ -18,6 +18,7 @@ class CreateBoardsTable extends Migration
             $table->string("title");
             $table->text('content');
             $table->bigInteger('writer')->unsigned();
+            $table->string('file');
             $table->timestamps();
 
             $table->foreign('writer')->references('id')->on('users');

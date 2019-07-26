@@ -28,3 +28,5 @@ Route::group(['middleware' => ['checkLogin']], function() {
     Route::get('/board/write', 'BoardController@writePage');
     Route::post('/board/write', 'BoardController@writeProcess');
 });
+
+Route::get('/image/{name}', 'BoardController@getImage');
